@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginPage</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #292929;
+            color: #eee;
+        }
+
+       
+        .login-box {
+            border: 2px solid #bf80ff;
+            max-width: 400px;
+            border-radius: 10px;
+            background-color: #1e1e1e;
+            color: #fff;
+            padding: 20px;
+            margin: 50px auto;
+        }
+
+        h2 {
+            color: #bf80ff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #bf80ff;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #bf80ff;
+            border-radius: 4px;
+            background-color: #1e1e1e;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #bf80ff;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d9b3ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" required>
+
+            <br>
+
+            <input type="submit" name="login" value="Entrar">
+        </form>
+    </div>
+</body>
+</html>
