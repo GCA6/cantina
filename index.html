@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoginPage</title>
     <style>
-        
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -16,7 +16,7 @@
             color: #eee;
         }
 
-       
+
         .login-box {
             border: 2px solid #bf80ff;
             max-width: 400px;
@@ -62,15 +62,17 @@
         }
     </style>
 </head>
+
 <body>
+
     <div class="login-box">
         <h2>Login</h2>
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <form method="post" action="./pages/login.php">
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" required>
 
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha" required>
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password" required>
 
             <br>
 
@@ -78,4 +80,5 @@
         </form>
     </div>
 </body>
+
 </html>
