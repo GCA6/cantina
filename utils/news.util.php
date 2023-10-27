@@ -28,4 +28,22 @@ class UtilNews
 			R::close();
 		}
 	}
+
+	public static function getNews()
+	{
+		require_once __DIR__ . "/../classes/r.class.php";
+
+		R::setup("mysql:host=localhost;dbname=cantina", "root", "");
+
+		$news = R::findAll("news", "ORDER BY date DESC LIMIT 2");
+
+		foreach ($news as $dado) {
+			echo "<div class='news'>";
+			echo "<h2>" . $dado->title . "</h2>";
+			echo "<p>" . $dado->content . "</p>";
+			echo "<p>" . $dado->author . "</p>";
+			echo "<p>" . $dado->date . "</p>";
+			echo "</div>";
+		}
+	}
 }

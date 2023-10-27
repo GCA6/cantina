@@ -12,8 +12,13 @@
 <body>
     <?php require_once "./components/header.inc.php"; ?>
 
-    <main><?php
-            echo $_SESSION["name"]; ?></main>
+    <main>
+        <?php
+        require_once "./utils/news.util.php";
+
+        UtilNews::getNews();
+        ?>
+    </main>
 
     <?php require_once "./components/footer.inc.php" ?>
 </body>
