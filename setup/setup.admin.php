@@ -8,4 +8,4 @@ $user->email = "admin@admin.com";
 $user->password = "admin";
 $user->isAdmin = true;
 
-Util::registerUser($user);
+UtilUser::registerUser($user);

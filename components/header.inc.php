@@ -6,18 +6,18 @@ require_once __DIR__ . "\..\utils\user.util.php";
   <h1><a href="../index.php">Cantina</a></h1>
   <ul>
     <?php
-    if (Util::isAuthenticated()) {
+    if (UtilUser::isAuthenticated()) {
     ?>
       <li><a href="../index.php">Home</a></li>
       <?php
-      if (Util::isAdmin()) {
+      if (UtilUser::isAdmin()) {
       ?>
         <li><a href="../pages/registerUsers.php">Registro de usuários</a></li>
-        <li><a href="">Registro de notícias</a></li>
+        <li><a href="../pages/registerNews.php">Registro de notícias</a></li>
       <?php
       }
       ?>
-      <li><a href="../actions/logout.php">Sair</a></li>
+      <li><a href="../actions/logout.action.php">Sair</a></li>
     <?php
     } else {
     ?>

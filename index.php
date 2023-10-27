@@ -13,7 +13,7 @@
     <?php require_once "./components/header.inc.php"; ?>
 
     <main><?php
-            echo $_SESSION["email"] ?></main>
+            echo $_SESSION["name"]; ?></main>
 
     <?php require_once "./components/footer.inc.php" ?>
 </body>

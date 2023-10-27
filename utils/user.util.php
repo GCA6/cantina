@@ -1,5 +1,5 @@
 <?php
-class Util
+class UtilUser
 {
     public static function registerUser($user)
     {
@@ -41,7 +41,7 @@ class Util
                 session_start();
             }
 
-            $_SESSION["email"] = $user->email;
+            $_SESSION["name"] = $user->name;
             $_SESSION["isAdmin"] = $user->isAdmin;
 
             header("Location: ../index.php");
@@ -69,7 +69,7 @@ class Util
             session_start();
         }
 
-        return isset($_SESSION["email"]) ? $_SESSION["email"] : false;
+        return isset($_SESSION["name"]) ? $_SESSION["name"] : false;
     }
 
     public static function isAdmin()

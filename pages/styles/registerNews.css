@@ -1,0 +1,68 @@
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+main form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+main form .label-input {
+	display: flex;
+	justify-content: right;
+	gap: 8px;
+	align-items: center;
+}
+
+main form .label-input label {
+	font-weight: 700;
+}
+
+main form .label-input input {
+	background-color: transparent;
+
+	border: 2px solid #d9d9d9;
+	border-radius: 5px;
+
+	font-size: 16px;
+
+	padding: 2px;
+
+	color: #d9d9d9;
+}
+
+main form .label-input textarea {
+	background-color: transparent;
+
+	border: 2px solid #d9d9d9;
+	border-radius: 5px;
+
+	font-size: 16px;
+
+	padding: 2px;
+
+	color: #d9d9d9;
+
+	resize: vertical;
+}
+
+main form .label-check {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	text-align: center;
+}
+
+main form button {
+	background-color: #d9d9d9;
+	border: 0;
+
+	padding: 4px;
+
+	border-radius: 4px;
+
+	font-weight: 700;
+}

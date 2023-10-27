@@ -16,7 +16,7 @@
 	<main>
 		<h1>Registro de Usuários</h1>
 
-		<form action="../actions/registerUser.php" method="post">
+		<form action="../actions/registerUser.action.php" method="post">
 			<div class="label-input">
 				<label for="name">Nome: </label>
 				<input type="text" name="name" id="name" required>

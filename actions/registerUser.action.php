@@ -14,6 +14,6 @@ $user->email = $email;
 $user->password = $password;
 $user->isAdmin = $isAdmin;
 
-Util::registerUser($user);
+UtilUser::registerUser($user);
 header("Location: ../index.php");
 exit();
