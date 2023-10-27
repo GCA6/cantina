@@ -12,7 +12,8 @@
 <body>
     <?php require_once "../components/header.inc.php" ?>
 
-    <main></main>
+    <main><?php
+            echo $_SESSION["isAdmin"] ?></main>
 
     <?php require_once "../components/footer.inc.php" ?>
 </body>

@@ -35,11 +35,36 @@ class Util
         R::close();
 
         if ($user) {
+            if (session_status() !== PHP_SESSION_ACTIVE) {
+                session_start();
+            }
+
+            $_SESSION["email"] = $user->email;
+            $_SESSION["isAdmin"] = $user->isAdmin;
+
             header("Location: home.php");
             exit();
         } else {
             header("Location: /cantina/errors/invalidCredentials.error.php");
             exit();
         }
+    }
+
+    public static function isAuthenticated()
+    {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        return isset($_SESSION["email"]) ? $_SESSION["email"] : false;
+    }
+
+    public static function isAdmin()
+    {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        return isset($_SESSION["isAdmin"]) ? $_SESSION["isAdmin"] : false;
     }
 }
