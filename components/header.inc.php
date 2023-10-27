@@ -12,12 +12,12 @@ require_once __DIR__ . "\..\utils\user.util.php";
       <?php
       if (Util::isAdmin()) {
       ?>
-        <li><a href="">Registro de usuários</a></li>
-        <li><a href="">Registro de produtos</a></li>
+        <li><a href="../pages/registerUsers.php">Registro de usuários</a></li>
+        <li><a href="">Registro de notícias</a></li>
       <?php
       }
       ?>
-      <li><a href="../pages/logout.php">Sair</a></li>
+      <li><a href="../actions/logout.php">Sair</a></li>
     <?php
     } else {
     ?>

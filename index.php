@@ -13,7 +13,7 @@
     <?php require_once "./components/header.inc.php"; ?>
 
     <main><?php
-            echo $_SESSION["isAdmin"] ?></main>
+            echo $_SESSION["email"] ?></main>
 
     <?php require_once "./components/footer.inc.php" ?>
 </body>

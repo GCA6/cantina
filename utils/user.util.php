@@ -9,11 +9,13 @@ class Util
 
         $existingUser = R::findOne("users", "email = ?", [$user->email]);
 
+
         if (!$existingUser) {
             $userDB = R::dispense("users");
             $userDB->name = $user->name;
             $userDB->email = $user->email;
-            $userDB->password = $user->password;
+            $hashedPassword = hash("sha256", $user->password);
+            $userDB->password = $hashedPassword;
             $userDB->isAdmin = $user->isAdmin;
 
             R::store($userDB);
