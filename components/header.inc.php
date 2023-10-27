@@ -8,17 +8,16 @@ require_once __DIR__ . "\..\utils\user.util.php";
     <?php
     if (Util::isAuthenticated()) {
     ?>
-      <li><a href="../pages/home.php">Home</a></li>
+      <li><a href="../index.php">Home</a></li>
       <?php
       if (Util::isAdmin()) {
-        echo Util::isAdmin()
       ?>
         <li><a href="">Registro de usuários</a></li>
         <li><a href="">Registro de produtos</a></li>
       <?php
       }
       ?>
-      <li><a href="">Sair</a></li>
+      <li><a href="../pages/logout.php">Sair</a></li>
     <?php
     } else {
     ?>

@@ -42,12 +42,23 @@ class Util
             $_SESSION["email"] = $user->email;
             $_SESSION["isAdmin"] = $user->isAdmin;
 
-            header("Location: home.php");
+            header("Location: ../index.php");
             exit();
         } else {
-            header("Location: /cantina/errors/invalidCredentials.error.php");
+            header("Location: ../errors/invalidCredentials.error.php");
             exit();
         }
+    }
+
+    public static function logoutUser()
+    {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        session_destroy();
+        header("Location: ../index.php");
+        exit();
     }
 
     public static function isAuthenticated()
