@@ -24,6 +24,14 @@ body {
     border-radius: 8px;
 }
 
+#login {
+    background-color: #d9d9d9;
+    color: #121212;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
 header {
     width: 100vw;
     display: flex;
