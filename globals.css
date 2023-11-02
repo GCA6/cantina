@@ -78,6 +78,21 @@ footer {
 main {
     height: calc(100vh - 82px - 61px);
     display: flex;
+    flex-direction: column;
+    gap: 30px;
     justify-content: center;
     align-items: center;
+}
+
+.news {
+    border: 2px solid #d9d9d9;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.news p {
+    width: 800px;
 }

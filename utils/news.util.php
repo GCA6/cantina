@@ -41,8 +41,7 @@ class UtilNews
 			echo "<div class='news'>";
 			echo "<h2>" . $dado->title . "</h2>";
 			echo "<p>" . $dado->content . "</p>";
-			echo "<p>" . $dado->author . "</p>";
-			echo "<p>" . $dado->date . "</p>";
+			echo "<p><em>Criado por " . $dado->author . " em " . $dado->date . "</em></p>";
 			echo "</div>";
 		}
 	}

@@ -13,10 +13,10 @@ require_once __DIR__ . "\..\utils\user.util.php";
       if (UtilUser::isAdmin()) {
       ?>
         <li><a href="../pages/registerUsers.php">Registro de usuários</a></li>
-        <li><a href="../pages/registerNews.php">Registro de notícias</a></li>
       <?php
       }
       ?>
+      <li><a href="../pages/registerNews.php">Registro de notícias</a></li>
       <li><a href="../actions/logout.action.php">Sair</a></li>
     <?php
     } else {
