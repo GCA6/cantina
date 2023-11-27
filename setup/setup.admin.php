@@ -6,6 +6,6 @@ $user = new User();
 $user->name = "admin";
 $user->email = "admin@admin.com";
 $user->password = "admin";
-$user->isAdmin = true;
+$user->profile = 0;
 
 UtilUser::registerUser($user);
