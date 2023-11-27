@@ -15,8 +15,11 @@ class UtilUser
             $userDB->name = $user->name;
             $userDB->email = $user->email;
 
+
             $hashedPassword = hash("sha256", $user->password);
             $userDB->password = $hashedPassword;
+
+            $userDB->profile = $user->profile;
 
             $userDB->profile = $user->profile;
 
@@ -101,6 +104,7 @@ class UtilUser
 
             $_SESSION["name"] = $user->name;
             $_SESSION["profile"] = $user->profile;
+            $_SESSION["profile"] = $user->profile;
 
             header("Location: ../index.php");
             exit();
@@ -136,6 +140,42 @@ class UtilUser
             session_start();
         }
 
+        $profile = isset($_SESSION["profile"]) ? $_SESSION["profile"] : false;
+
+        return $profile === "0" ? true : false;
+    }
+
+    public static function isManager()
+    {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        $profile = isset($_SESSION["profile"]) ? $_SESSION["profile"] : false;
+
+        return $profile === "1" ? true : false;
+    }
+
+    public static function isCashier()
+    {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        $profile = isset($_SESSION["profile"]) ? $_SESSION["profile"] : false;
+
+        return $profile === "2" ? true : false;
+    }
+
+    public static function isClient()
+    {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        $profile = isset($_SESSION["profile"]) ? $_SESSION["profile"] : false;
+
+        return $profile === "3" ? true : false;
         $profile = isset($_SESSION["profile"]) ? $_SESSION["profile"] : false;
 
         return $profile === "0" ? true : false;

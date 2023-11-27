@@ -7,6 +7,8 @@ require_once __DIR__ . "\..\utils\user.util.php";
   <ul>
     <li><a href="../index.php">Home</a></li>
     <li><a href="../pages/products.php">Produtos</a></li>
+    <li><a href="../index.php">Home</a></li>
+    <li><a href="../pages/products.php">Produtos</a></li>
     <?php
     if (UtilUser::isAuthenticated()) {
     ?>
