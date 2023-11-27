@@ -1,0 +1,131 @@
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+main i {
+	height: 10px;
+	width: 10px;
+	color: #d42300;
+}
+
+main h1 {
+	color: #d42300;
+}
+
+main .register-user {
+	width: 80%;
+
+	display: flex;
+	justify-content: flex-end;
+}
+
+main .register-user a {
+	background-color: #d42300;
+	color: #f5ebdc;
+
+	padding: 10px 20px;
+	border-radius: 8px;
+
+	text-decoration: none;
+}
+
+main table {
+	width: 80%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+main table th,
+main table td {
+	border: 1px solid #d42300;
+	padding: 12px;
+	text-align: left;
+}
+
+main table .at-font {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+}
+
+main table .icon-editar {
+	text-align: center;
+	width: 90px;
+}
+
+main table th {
+	background-color: #fe8824;
+	color: #f5ebdc;
+	letter-spacing: 2px;
+}
+
+main table tr:hover {
+	background-color: rgba(254, 136, 36, 0.6);
+	color: #f5ebdc;
+}
+
+main form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+main form .label-input {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+	align-items: center;
+}
+
+main form .label-input label {
+	font-weight: 700;
+}
+
+main form .label-input input {
+	background-color: transparent;
+
+	border: 2px solid #fe8824;
+	border-radius: 5px;
+
+	font-size: 16px;
+
+	padding: 2px;
+
+	color: #fe8824;
+}
+
+main form .label-input textarea {
+	background-color: transparent;
+
+	border: 2px solid #fe8824;
+	border-radius: 5px;
+
+	font-size: 16px;
+
+	padding: 2px;
+
+	color: #fe8824;
+
+	resize: vertical;
+}
+
+main form .label-check {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	text-align: center;
+}
+
+main form button {
+	background-color: #d42300;
+	color: #f5ebdc;
+	border: 0;
+
+	padding: 4px;
+
+	border-radius: 4px;
+
+	font-weight: 700;
+}
