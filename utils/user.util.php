@@ -180,37 +180,4 @@ class UtilUser
 
         return $profile === "0" ? true : false;
     }
-
-    public static function isManager()
-    {
-        if (session_status() !== PHP_SESSION_ACTIVE) {
-            session_start();
-        }
-
-        $profile = isset($_SESSION["profile"]) ? $_SESSION["profile"] : false;
-
-        return $profile === "1" ? true : false;
-    }
-
-    public static function isCashier()
-    {
-        if (session_status() !== PHP_SESSION_ACTIVE) {
-            session_start();
-        }
-
-        $profile = isset($_SESSION["profile"]) ? $_SESSION["profile"] : false;
-
-        return $profile === "2" ? true : false;
-    }
-
-    public static function isClient()
-    {
-        if (session_status() !== PHP_SESSION_ACTIVE) {
-            session_start();
-        }
-
-        $profile = isset($_SESSION["profile"]) ? $_SESSION["profile"] : false;
-
-        return $profile === "3" ? true : false;
-    }
 }
