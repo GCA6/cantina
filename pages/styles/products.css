@@ -1,0 +1,41 @@
+main .box-products {
+	border: 2px solid #d42300;
+	padding: 20px;
+	border-radius: 15px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	width: 700px;
+}
+
+main .box-products h1 {
+	color: #d42300;
+}
+
+main .box-products .products ul {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+
+	list-style: none;
+}
+
+main .box-products .products ul li {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+main .box-products .products .name-value-ofprocuct {
+	display: flex;
+	justify-content: space-between;
+	color: #d42300;
+}
+
+main .box-products .products .description-product {
+	margin-left: 20px;
+
+	font-size: small;
+}
