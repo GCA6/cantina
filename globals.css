@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+@font-face {
+    font-family: 'Insanibu';
+    src: url('assets/fonts/Insanibu.ttf') format('woff2');
+    src: url('assets/fonts/Insanibu.ttf') format('woff');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -7,26 +13,18 @@
 }
 
 body {
-    background-color: #121212;
-    color: #d9d9d9;
+    background-color: #f5ebdc;
+    color: #fe8824;
     height: 100vh;
     width: 100vw;
 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Insanibu', sans-serif;
     font-weight: 400;
 }
 
 #login {
-    background-color: #d9d9d9;
-    color: #121212;
-
-    padding: 10px 20px;
-    border-radius: 8px;
-}
-
-#login {
-    background-color: #d9d9d9;
-    color: #121212;
+    background-color: #d42300;
+    color: #f5ebdc;
 
     padding: 10px 20px;
     border-radius: 8px;
@@ -39,17 +37,17 @@ header {
     padding: 20px 40px;
     align-items: center;
 
-    border-bottom: 2px solid #d9d9d9;
+    border-bottom: 4px solid #d42300;
 }
 
 header h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-family: "Insanibu", sans-serif;
+    font-weight: 400;
 }
 
 header a {
     text-decoration: none;
-    color: #d9d9d9;
+    color: #d62400;
 }
 
 header ul {
@@ -59,33 +57,30 @@ header ul {
     list-style: none;
 }
 
-
-p,
-label {
-    font-family: 'Roboto', sans-serif;
-}
-
-footer {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    padding: 20px 40px;
-    align-items: center;
-
-    border-top: 2px solid #d9d9d9;
-}
-
 main {
-    height: calc(100vh - 82px - 61px);
+    height: calc(100vh - 82px - 57px);
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: center;
     align-items: center;
+
+    overflow-y: auto;
+}
+
+footer {
+    background-color: #502314;
+    color: #f5ebdc;
+
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+    align-items: center;
 }
 
 .news {
-    border: 2px solid #d9d9d9;
+    border: 2px solid #d62400;
     border-radius: 15px;
     padding: 20px;
     display: flex;
@@ -93,6 +88,14 @@ main {
     gap: 12px;
 }
 
+.news h2 {
+    color: #d62400;
+}
+
 .news p {
     width: 800px;
+}
+
+.news p:nth-child(3) {
+    text-align: end;
 }

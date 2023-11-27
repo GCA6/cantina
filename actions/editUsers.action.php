@@ -3,9 +3,9 @@
 require_once "../utils/user.util.php";
 require_once "../classes/user.class.php";
 
+$id = $_POST["id"];
 $name = $_POST["name"];
 $email = $_POST["email"];
-$password = $_POST["password"];
 $profileRequest = isset($_POST["profile"]);
 
 switch ($_POST["profile"]) {
@@ -24,11 +24,11 @@ switch ($_POST["profile"]) {
 }
 
 $user = new User();
+$user->id = $id;
 $user->name = $name;
 $user->email = $email;
-$user->password = $password;
 $user->profile = $profile;
 
-UtilUser::registerUser($user);
+UtilUser::editUser($user);
 header("Location: ../pages/users.php");
 exit();

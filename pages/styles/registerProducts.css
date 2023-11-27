@@ -16,7 +16,7 @@ main form {
 
 main form .label-input {
 	display: flex;
-	justify-content: right;
+	justify-content: space-between;
 	gap: 8px;
 	align-items: center;
 }
@@ -38,11 +38,26 @@ main form .label-input input {
 	color: #fe8824;
 }
 
+main form .label-input textarea {
+	background-color: transparent;
+
+	border: 2px solid #fe8824;
+	border-radius: 5px;
+
+	font-size: 16px;
+
+	padding: 2px;
+
+	color: #fe8824;
+
+	resize: vertical;
+}
+
 main form .label-check {
-	margin-top: 12px;
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
 	gap: 8px;
+	text-align: center;
 }
 
 main form button {

@@ -1,9 +1,10 @@
 <?php
 
-class User {
+class User
+{
     public $id;
     public $name;
     public $email;
     public $password;
-    public $isAdmin;
+    public $profile;
 }

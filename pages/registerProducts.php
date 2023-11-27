@@ -16,23 +16,27 @@ if (UtilUser::isAdmin() === false && UtilUser::isManager() === false) {
 	<title>Cantina - Registro de Notícias</title>
 
 	<link rel="stylesheet" href="../globals.css">
-	<link rel="stylesheet" href="./styles/registerNews.css">
+	<link rel="stylesheet" href="./styles/registerProducts.css">
 </head>
 
 <body>
 	<?php require_once "../components/header.inc.php" ?>
 
 	<main>
-		<h1>Registro de Notícias</h1>
+		<h1>Registro de Produtos</h1>
 
-		<form action="../actions/registerNews.action.php" method="post">
+		<form action="../actions/registerProducts.action.php" method="post">
 			<div class="label-input">
-				<label for="title">Título: </label>
-				<input type="text" name="title" id="title" required>
+				<label for="name">Nome: </label>
+				<input type="text" name="name" id="name" required>
 			</div>
 			<div class="label-input">
-				<label for="content">Conteúdo: </label>
-				<textarea name="content" id="content" cols="20" rows="5" required></textarea>
+				<label for="value">Valor (R$): </label>
+				<input type="number" name="value" id="value" step="0.01" required>
+			</div>
+			<div class="label-input">
+				<label for="description">Descrição: </label>
+				<textarea name="description" id="description" cols="20" rows="5" required></textarea>
 			</div>
 			<button type="submit">Registrar</button>
 		</form>
